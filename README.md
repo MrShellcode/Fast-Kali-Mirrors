@@ -13,15 +13,18 @@ To configure Kali Linux repositories on your system, follow these steps:
 3. Comment out any existing repository URLs by adding a `#` (hash) symbol at the beginning of the lines. This will prevent the system from using those repositories. For example:
 
    ```bash
-   # deb http://old-repo-url.com/kali kali-rolling main non-free contrib
-   # deb-src http://old-repo-url.com/kali kali-rolling main non-free contrib
+   # See https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
+   # deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
+
+   # Additional line for source packages
+   # deb-src http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
    ```
 
 4. Add the following lines to your `sources.list` file to configure the Kali Linux repository:
 
    ```bash
-   deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main non-free contrib
-   deb-src https://mirrors.ocf.berkeley.edu/kali kali-rolling main non-free contrib
+   deb https://mirrors.ocf.berkeley.edu/kali kali-rolling main non-free non-free-firmware
+   deb-src https://mirrors.ocf.berkeley.edu/kali kali-rolling main non-free non-free-firmware
    ```
 
    These lines specify the repository URLs for the Kali Rolling release along with the main, non-free, and contrib components.
